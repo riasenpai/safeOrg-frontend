@@ -15,5 +15,5 @@ export function getUrl(endpoint){
     if (process.env.NODE_ENV === 'development') {
         host= "http://localhost:3000";
     }
-    return(process.env.REMOTE_BACKEND+"/"+endpoint);
+    return(host+"/"+endpoint);
 }
