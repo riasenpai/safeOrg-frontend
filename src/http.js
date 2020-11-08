@@ -11,11 +11,9 @@ export function getData(url,callback){
 }
 
 export function getUrl(endpoint){
-    let host="";
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+    let host="http://52.66.129.248:3000";
+    if (process.env.NODE_ENV === 'development') {
         host= "http://localhost:3000";
-    } else {
-       host = "http://52.66.129.248:3000";
     }
     return(process.env.REMOTE_BACKEND+"/"+endpoint);
 }
